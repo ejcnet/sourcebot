@@ -1,0 +1,2 @@
+# sourcebot
+A news bot.
