@@ -1,0 +1,24 @@
+{
+    "name": "Ejcnet/Sourcebot",
+    "description": "A news bot.",
+    "license": "MIT",
+    "keywords": ["news", "bot", "sourcebot"],
+    "authors": [
+        {
+            "name": "Paul Watson",
+            "email": "sourcebot@paulmwatson.com"
+        }
+    ],
+    "require": {
+      "monolog/monolog": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.2.*",
+        "heroku/heroku-buildpack-php": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ejcnet\\Sourcebot\\": "src"
+        }
+    }
+}
