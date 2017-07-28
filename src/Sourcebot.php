@@ -2,8 +2,9 @@
 
 class Sourcebot {
 
-  public function helloWorld($bool = true)
+  public function helloWorld()
   {
+    $bool = true;
     return $bool;
   }
 
