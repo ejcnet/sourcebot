@@ -60,5 +60,5 @@ jobs:
       - run: chmod +x ./cc-test-reporter
       - run: ./cc-test-reporter before-build
       # run tests!
-      - run: phpunit --coverage-clover $CIRCLE_TEST_REPORTS/clover.xml
+      - run: vendor/bin/phpunit --coverage-clover $CIRCLE_TEST_REPORTS/clover.xml
       - run: ./cc-test-reporter after-build --exit-code $?
