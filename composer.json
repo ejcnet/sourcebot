@@ -13,7 +13,8 @@
       "monolog/monolog": "1.0.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "6.2.*"
+        "phpunit/phpunit": "6.2.*",
+        "heroku/heroku-buildpack-php": "*"
     },
     "autoload": {
         "psr-4": {
