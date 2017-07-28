@@ -2,5 +2,10 @@
   "name": "Sourcebot",
   "description": "A news bot.",
   "repository": "https://github.com/ejcnet/sourcebot",
-  "addons": []
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
 }
