@@ -5,6 +5,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: e3d75ff107da64b21112668c156648bb46095c70ea6660964a402c766c92225c
     docker:
       # specify the version you desire here
       - image: circleci/php:7.1.5-browsers
@@ -33,5 +35,9 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
+      - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: chmod +x ./cc-test-reporter
+      - run: ./cc-test-reporter before-build
       # run tests!
-      - run: phpunit
+      - run: phpunit --coverage-clover $CIRCLE_TEST_REPORTS/clover.xml
+      - run: ./cc-test-reporter after-build --exit-code $?
