@@ -61,4 +61,4 @@ jobs:
       - run: ./cc-test-reporter before-build
       # run tests!
       - run: vendor/bin/phpunit --coverage-clover $CIRCLE_TEST_REPORTS/clover.xml
-      - run: ./cc-test-reporter after-build --exit-code $?
+      - run: ./cc-test-reporter after-build -t clover -p $CIRCLE_TEST_REPORTS --exit-code $?
