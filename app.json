@@ -2,10 +2,12 @@
   "name": "Sourcebot",
   "description": "A news bot.",
   "repository": "https://github.com/ejcnet/sourcebot",
+  "keywords": ["news", "bot", "facebook messenger"],
   "scripts": {},
   "env": {},
   "formation": {},
   "addons": [],
+  "success_url": "/",
   "buildpacks": [
     {
       "url": "heroku/php"
