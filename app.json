@@ -2,6 +2,9 @@
   "name": "Sourcebot",
   "description": "A news bot.",
   "repository": "https://github.com/ejcnet/sourcebot",
+  "scripts": {},
+  "env": {},
+  "formation": {},
   "addons": [],
   "buildpacks": [
     {
