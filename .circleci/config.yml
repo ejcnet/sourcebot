@@ -22,6 +22,7 @@ jobs:
             - vendor
       - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
       - run: chmod +x ./cc-test-reporter
+      - run: mkdir -p $CIRCLE_TEST_REPORTS/phpunit
       - run: ./cc-test-reporter before-build
       - run: vendor/bin/phpunit --coverage-clover $CIRCLE_TEST_REPORTS/phpunit/clover.xml
       - run: ./cc-test-reporter after-build -t clover --exit-code $?
