@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: docker-php-ext-enable xdebug
+      - run: sudo pecl install xdebug && sudo docker-php-ext-enable xdebug
       - run: composer self-update
       - restore_cache:
           keys:
