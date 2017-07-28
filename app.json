@@ -4,7 +4,10 @@
   "repository": "https://github.com/ejcnet/sourcebot",
   "keywords": ["news", "bot", "facebook messenger"],
   "scripts": {},
-  "env": {},
+  "env": {
+    "SLACK_BOT_USER_OAUTH_ACCESS_TOKEN": {
+      "required": true
+  },
   "formation": {},
   "addons": [],
   "success_url": "/",
