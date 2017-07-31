@@ -5,6 +5,10 @@
     <title>Sourcebot</title>
   </head>
   <body>
-    <p>Add @sourcebot to your Slack and say <code>ping</code>.</p>
+    <h1>Get Started</h1>
+    <ul>
+      <li>Add @sourcebot to your Slack and say <code>ping</code>.</li>
+      <li>Message @sourcebot on Facebook Messenger and say "hi".</li>
+    </ul>
   </body>
 </html>
