@@ -8,7 +8,7 @@ use Monolog\Handler\StreamHandler;
 
 $log = new Logger('sourcebot');
 
-if (getenv('ENVIRONMENT') == 'PRODUCTION') {
+if (getenv('PRODUCTION')) {
   $log->pushHandler(new StreamHandler('php://stderr', Logger::INFO));
 } else {
   $dotenv = new Dotenv\Dotenv(__DIR__, '../.env');
