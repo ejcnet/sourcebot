@@ -2,3 +2,5 @@ vendor/
 .env
 .DS_Store
 clover.xml
+web/config.ru
+logs

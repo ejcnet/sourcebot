@@ -1,6 +1,16 @@
 # Sourcebot
 A news bot.
 
+## Configuration
+
+As Sourcebot relies on messaging platforms for it's user interface you will have to configure a few 3rd party services to get going:
+1. one
+- two
+- three
+- four
+
+
+
 ## Develop
 [![Code Climate](https://codeclimate.com/github/ejcnet/sourcebot/badges/gpa.svg)](https://codeclimate.com/github/ejcnet/sourcebot)
 
