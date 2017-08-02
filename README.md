@@ -1,12 +1,12 @@
+# Sourcebot
+A news bot.
+
 - [Develop](#develop)
 - [Test](#test)
 - [Build](#build)
 - [Deploy](#deploy)
 - [Contribute](#contribute)
 - [Notes](#notes)
-
-# Sourcebot
-A news bot.
 
 ## <a name="develop"></a> Develop
 [![Code Climate](https://codeclimate.com/github/ejcnet/sourcebot/badges/gpa.svg)](https://codeclimate.com/github/ejcnet/sourcebot)
