@@ -46,7 +46,7 @@ Tests are run with `phpunit`
 ## <a name="build"></a> Build
 [![CircleCI](https://circleci.com/gh/ejcnet/sourcebot.svg?style=svg)](https://circleci.com/gh/Ejcnet/sourcebot)
 
-Sourcebot is configured to build on (CircleCI)[https://circleci.com/gh/Ejcnet/sourcebot].
+Sourcebot is configured to build on [CircleCI](https://circleci.com/gh/Ejcnet/sourcebot).
 
 You can run local CircleCI builds with `circleci build` using the [CircleCI CLI](https://circleci.com/docs/2.0/local-jobs/).
 
