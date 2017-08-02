@@ -7,7 +7,7 @@ use Monolog\Handler\StreamHandler;
 
 $log = new Logger('sourcebot');
 
-if (getenv('ENVIRONMENT') !== 'development') {
+if (getenv('ENVIRONMENT') && getenv('ENVIRONMENT') !== 'development') {
   $log_location = 'php://stdout';
 } else {
   $dotenv = new Dotenv\Dotenv(__DIR__, '../.env');
@@ -17,3 +17,11 @@ if (getenv('ENVIRONMENT') !== 'development') {
 
 $log->pushHandler(new StreamHandler($log_location, Logger::INFO));
 $log->info('Logging to '.$log_location);
+
+if (isset($_SERVER['REQUEST_METHOD']) && isset($_SERVER['REQUEST_URI'])) {
+  $log->info($_SERVER['REQUEST_METHOD'].'=>'.$_SERVER['REQUEST_URI']);
+}
+
+if (file_get_contents('php://input')) {
+  $log->info('Body=>'.file_get_contents('php://input'));
+}

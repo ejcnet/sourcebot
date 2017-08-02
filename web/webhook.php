@@ -4,8 +4,6 @@ require '../src/app.php';
 use Mpociot\BotMan\BotManFactory;
 use Mpociot\BotMan\BotMan;
 
-$log->info('Request body: '.file_get_contents('php://input'));
-
 if (getenv('FACEBOOK_APP_SECRET')) {
   $config = [
     'facebook_token' => getenv('FACEBOOK_PAGE_ACCESS_TOKEN'),
@@ -14,18 +12,27 @@ if (getenv('FACEBOOK_APP_SECRET')) {
 
   $botman = BotManFactory::create($config);
 
-  $botman->verifyServices(getenv('FACEBOOK_VERIFY_TOKEN'));
+  if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['hub_mode'])) {
+    $botman->verifyServices(getenv('FACEBOOK_VERIFY_TOKEN'));
+  } else if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $botman->hears('ping', function($bot) {
+      $bot->reply('pong at ' . time());
+    });
 
-  $botman->hears('ping', function($bot) {
-    $bot->reply('pong at ' . time());
-  });
+    $botman->fallback(function($bot) {
+      $bot->reply('Try "ping"...');
+    });
 
-  $botman->fallback(function($bot) {
-    $bot->reply('Try "ping"...');
-  });
-
-  $log->info('Listening for Facebook Messenger webhooks...');
-  $botman->listen();
+    $botman->listen();
+  }
 } else {
-  $log->info('FACEBOOK_APP_SECRET is not set.');
+  $error = 'Please set FACEBOOK_APP_SECRET.';
+  $log->info($error);
+  echo '<p>'.$error.'</p>';
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' && !isset($_GET['hub_mode'])) {
+  $error = 'This webhook handles Facebook Webhook verification via GET or a Facebook Webhook via POST.';
+  $log->info($error);
+  echo '<p>'.$error.'</p>';
 }
