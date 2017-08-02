@@ -7,8 +7,8 @@ use Monolog\Handler\StreamHandler;
 
 $log = new Logger('sourcebot');
 
-if (getenv('ENVIRONMENT') && getenv('ENVIRONMENT') !== 'development') {
-  $log_location = 'php://stderr';
+if (getenv('ENVIRONMENT') !== 'development') {
+  $log_location = 'php://stdout';
 } else {
   $dotenv = new Dotenv\Dotenv(__DIR__, '../.env');
   $dotenv->load();
@@ -16,3 +16,4 @@ if (getenv('ENVIRONMENT') && getenv('ENVIRONMENT') !== 'development') {
 }
 
 $log->pushHandler(new StreamHandler($log_location, Logger::INFO));
+$log->info('Logging to '.$log_location);
