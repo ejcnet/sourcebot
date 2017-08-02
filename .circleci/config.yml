@@ -4,6 +4,7 @@ jobs:
   build:
     environment:
       CC_TEST_REPORTER_ID: e3d75ff107da64b21112668c156648bb46095c70ea6660964a402c766c92225c
+      APP_ENVIRONMENT: test
     docker:
       - image: notnoopci/php:7.1.5-browsers
     working_directory: ~/repo
