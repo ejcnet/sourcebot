@@ -1,3 +1,8 @@
+<?php
+require '../src/app.php';
+use Michelf\Markdown;
+$html=Markdown::defaultTransform(file_get_contents('../README.md'));
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,10 +10,6 @@
     <title>Sourcebot</title>
   </head>
   <body>
-    <h1>Get Started</h1>
-    <ul>
-      <li>Add @sourcebot to your Slack and say <code>ping</code>.</li>
-      <li>Message @sourcebot on Facebook Messenger and say "hi".</li>
-    </ul>
+    <?=$html?>
   </body>
 </html>

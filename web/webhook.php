@@ -1,24 +1,10 @@
 <?php
-require '../vendor/autoload.php';
+require '../src/app.php';
 
 use Mpociot\BotMan\BotManFactory;
 use Mpociot\BotMan\BotMan;
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
 
-$log = new Logger('sourcebot');
-
-if (getenv('PRODUCTION')) {
-  $log->pushHandler(new StreamHandler('php://stderr', Logger::INFO));
-} else {
-  $dotenv = new Dotenv\Dotenv(__DIR__, '../.env');
-  $dotenv->load();
-  $log->pushHandler(new StreamHandler('../logs/development.log', Logger::INFO));
-  foreach($_SERVER as $h=>$v)
-    $log->info($h.'='.$v);
-}
-
-$log->info(file_get_contents('php://input'));
+$log->info('Request body: '.file_get_contents('php://input'));
 
 $config = [
   'facebook_token' => getenv('FACEBOOK_PAGE_ACCESS_TOKEN'),
@@ -38,5 +24,3 @@ $botman->fallback(function($bot) {
 });
 
 $botman->listen();
-
-?>
