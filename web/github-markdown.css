@@ -7,7 +7,6 @@
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
@@ -150,22 +149,12 @@
   -webkit-text-decoration-skip: objects;
 }
 
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline-width: 0;
-}
-
 .markdown-body strong {
   font-weight: inherit;
 }
 
 .markdown-body strong {
   font-weight: bolder;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 .markdown-body img {
@@ -198,7 +187,7 @@
   overflow: visible;
 }
 
-.markdown-body [type="checkbox"] {
+.markdown-body input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -256,44 +245,56 @@
   padding: 0;
 }
 
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+h1 {
+  line-height: 1.25;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0.67em 0 16px 0;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
 }
 
-.markdown-body h1 {
-  font-size: 32px;
+h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  font-size: 1.25em;
   font-weight: 600;
 }
 
-.markdown-body h2 {
-  font-size: 24px;
+h4 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  font-size: 1em;
   font-weight: 600;
 }
 
-.markdown-body h3 {
-  font-size: 20px;
+h5 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  font-size: 0.875em;
   font-weight: 600;
 }
 
-.markdown-body h4 {
-  font-size: 16px;
+h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  font-size: 0.85em;
   font-weight: 600;
-}
-
-.markdown-body h5 {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.markdown-body h6 {
-  font-size: 12px;
-  font-weight: 600;
+  color: #6a737d;
 }
 
 .markdown-body p {
@@ -344,31 +345,31 @@
 }
 
 .markdown-body .pl-0 {
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 
 .markdown-body .pl-1 {
-  padding-left: 4px !important;
+  padding-left: 4px;
 }
 
 .markdown-body .pl-2 {
-  padding-left: 8px !important;
+  padding-left: 8px;
 }
 
 .markdown-body .pl-3 {
-  padding-left: 16px !important;
+  padding-left: 16px;
 }
 
 .markdown-body .pl-4 {
-  padding-left: 24px !important;
+  padding-left: 24px;
 }
 
 .markdown-body .pl-5 {
-  padding-left: 32px !important;
+  padding-left: 32px;
 }
 
 .markdown-body .pl-6 {
-  padding-left: 40px !important;
+  padding-left: 40px;
 }
 
 .markdown-body::before {
@@ -383,11 +384,11 @@
 }
 
 .markdown-body>*:first-child {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 .markdown-body>*:last-child {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 .markdown-body a:not([href]) {
@@ -400,10 +401,6 @@
   padding-right: 4px;
   margin-left: -20px;
   line-height: 1;
-}
-
-.markdown-body .anchor:focus {
-  outline: none;
 }
 
 .markdown-body p,
@@ -453,74 +450,33 @@
   box-shadow: inset 0 -1px 0 #959da5;
 }
 
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.markdown-body h1 .octicon-link,
-.markdown-body h2 .octicon-link,
-.markdown-body h3 .octicon-link,
-.markdown-body h4 .octicon-link,
-.markdown-body h5 .octicon-link,
-.markdown-body h6 .octicon-link {
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
   color: #1b1f23;
   vertical-align: middle;
   visibility: hidden;
 }
 
-.markdown-body h1:hover .anchor,
-.markdown-body h2:hover .anchor,
-.markdown-body h3:hover .anchor,
-.markdown-body h4:hover .anchor,
-.markdown-body h5:hover .anchor,
-.markdown-body h6:hover .anchor {
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
   text-decoration: none;
 }
 
-.markdown-body h1:hover .anchor .octicon-link,
-.markdown-body h2:hover .anchor .octicon-link,
-.markdown-body h3:hover .anchor .octicon-link,
-.markdown-body h4:hover .anchor .octicon-link,
-.markdown-body h5:hover .anchor .octicon-link,
-.markdown-body h6:hover .anchor .octicon-link {
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
   visibility: visible;
-}
-
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2em;
-  border-bottom: 1px solid #eaecef;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.5em;
-  border-bottom: 1px solid #eaecef;
-}
-
-.markdown-body h3 {
-  font-size: 1.25em;
-}
-
-.markdown-body h4 {
-  font-size: 1em;
-}
-
-.markdown-body h5 {
-  font-size: 0.875em;
-}
-
-.markdown-body h6 {
-  font-size: 0.85em;
-  color: #6a737d;
 }
 
 .markdown-body ul,
@@ -598,6 +554,7 @@
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
+  background-color: #1B1F23;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
 }
@@ -643,9 +600,7 @@
 
 .markdown-body pre code {
   display: inline;
-  max-width: auto;
   padding: 0;
-  margin: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;
