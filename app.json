@@ -4,6 +4,10 @@
   "repository": "https://github.com/ejcnet/sourcebot",
   "keywords": ["news", "bot", "facebook messenger"],
   "env": {
+    "ENVIRONMENT": {
+      "description": "Set to production, development, or test.",
+      "value": "production"
+    },
     "FACEBOOK_PAGE_ACCESS_TOKEN": {
       "description": "Find this in your app Messenger product settings on https://developers.facebook.com."
     },
