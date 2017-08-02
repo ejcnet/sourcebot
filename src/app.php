@@ -7,12 +7,15 @@ use Monolog\Handler\StreamHandler;
 
 $log = new Logger('sourcebot');
 
-if (getenv('APP_ENVIRONMENT') && getenv('APP_ENVIRONMENT') !== 'development') {
-  $log_location = 'php://stdout';
+if (file_exists($dir_prefix.'logs/')) {
+  $log_location = $dir_prefix.'logs/development.log';
 } else {
+  $log_location = 'php://stdout';
+}
+
+if (file_exists('../.env')) {
   $dotenv = new Dotenv\Dotenv(__DIR__, '../.env');
   $dotenv->load();
-  $log_location = $dir_prefix.'logs/development.log';
 }
 
 $log->pushHandler(new StreamHandler($log_location, Logger::INFO));
