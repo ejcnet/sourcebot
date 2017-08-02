@@ -6,9 +6,9 @@ use Mpociot\BotMan\BotMan;
 
 if (getenv('FACEBOOK_APP_SECRET')) {
     $config = [
-    'facebook_token' => getenv('FACEBOOK_PAGE_ACCESS_TOKEN'),
-    'facebook_app_secret' => getenv('FACEBOOK_APP_SECRET')
-  ];
+        'facebook_token' => getenv('FACEBOOK_PAGE_ACCESS_TOKEN'),
+        'facebook_app_secret' => getenv('FACEBOOK_APP_SECRET')
+    ];
 
     $botman = BotManFactory::create($config);
 

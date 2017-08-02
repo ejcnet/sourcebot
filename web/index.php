@@ -28,7 +28,7 @@ $html=Markdown::defaultTransform(file_get_contents('../README.md'));
   </head>
   <body>
     <article class="markdown-body">
-      <?=$html?>
+        <?=$html?>
     </article>
   </body>
 </html>
