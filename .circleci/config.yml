@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: sudo pecl channel-update pecl.php.net
       - run: sudo pecl install xdebug && sudo docker-php-ext-enable xdebug
-      - run: composer self-update
+      - run: sudo composer self-update
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.json" }}
