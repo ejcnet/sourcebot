@@ -40,20 +40,24 @@
                 if ($json_body['namespace'] == 'wp/v2') {
                     $msg = 'Wordpress REST API verified';
                 } else {
-                    $msg = 'This does not look like the <a href="https://wordpress.org/plugins/rest-api/">Wordpress REST API</a> v2';
+                    $msg = 'This does not look like the <a href="https://wordpress.org/plugins/rest-api/">Wordpress REST
+                            API</a> v2';
                 }
             } catch (GuzzleHttp\Exception\ClientException $e) { #good
                 $res = $e->getResponse();
                 $msg = 'Could not <code>GET</code> resource';
-                $suggestion = 'Is <code>'.$request_host.'</code> running Wordpress and the <a href="https://wordpress.org/plugins/rest-api/">Wordpress REST API</a> plugin?';
+                $suggestion = 'Is <code>'.$request_host.'</code> running Wordpress and the
+                                <a href="https://wordpress.org/plugins/rest-api/">Wordpress REST API</a> plugin?';
             } catch (GuzzleHttp\Exception\ConnectException $e) { #good
                 $res = $e->getResponse();
                 $msg = 'Connection exception';
-                $suggestion = '<code>WORDPRESS_API_HOST_URL</code> is probably invalid. It should be something like <code>https://yourwebsite.com/</code>';
+                $suggestion = '<code>WORDPRESS_API_HOST_URL</code> is probably invalid. It should be something like
+                                <code>https://yourwebsite.com/</code>';
             } catch (Exception $e) {
                 $res = $e->getResponse();
                 $msg_full = $e->getMessage();
-                $suggestion = 'Please check your server and that <code>WORDPRESS_API_HOST_URL</code> is set to something like <code>https://yourwebsite.com/</code>';
+                $suggestion = 'Please check your server and that <code>WORDPRESS_API_HOST_URL</code> is set to something
+                                 like <code>https://yourwebsite.com/</code>';
             } finally {
                 if (isset($res)) {
                     echo '<li>HTTP Status Code: <code>'.$res->getStatusCode().'</code></li>';
@@ -69,7 +73,8 @@
                 }
             }
         } else { #good
-            $error = 'Please set <code>WORDPRESS_API_HOST_URL</code> to something like <code>https://yourwebsite.com</code>';
+            $error = 'Please set <code>WORDPRESS_API_HOST_URL</code> to something like
+                        <code>https://yourwebsite.com</code>';
             $log->info($error);
             echo '<li>'.$error.'</li>';
         }
