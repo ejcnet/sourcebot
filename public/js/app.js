@@ -793,6 +793,7 @@ var Vue = __webpack_require__(42);
 
 Vue.component('botman-tinker', __webpack_require__(36));
 
+/* exported app */
 var app = new Vue({
   el: '#app'
 });

@@ -17,6 +17,7 @@ let Vue = require('vue');
 
 Vue.component('botman-tinker', require('./components/BotManTinker.vue'));
 
+/* exported app */
 const app = new Vue({
     el: '#app'
 });
