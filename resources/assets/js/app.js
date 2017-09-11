@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 
-Vue = require('vue');
+let Vue = require('vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -783,7 +783,7 @@ module.exports = g;
 
 __webpack_require__(29);
 
-Vue = __webpack_require__(42);
+var Vue = __webpack_require__(42);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
