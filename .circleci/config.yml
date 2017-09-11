@@ -20,6 +20,7 @@ jobs:
           key: composer-v1-{{ checksum "composer.json" }}
           paths:
             - vendor
+      - run: sudo touch .env
       - run: sudo php artisan key:generate
       - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
       - run: chmod +x ./cc-test-reporter
