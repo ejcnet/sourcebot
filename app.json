@@ -4,6 +4,9 @@
   "repository": "https://github.com/ejcnet/sourcebot",
   "keywords": ["news", "bot", "facebook messenger"],
   "env": {
+    "WORDPRESS_API_HOST_URL": {
+      "description": "The host for the Wordpress REST API e.g. https://yourwebsite.com/"
+    },
     "FACEBOOK_APP_SECRET": {
       "description": "Create a Facebook app at https://developers.facebook.com."
     },

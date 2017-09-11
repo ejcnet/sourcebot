@@ -1,10 +1,11 @@
 # Sourcebot
-A news bot.
+A Facebook Messenger news bot for your Wordpress website.
 
 - [Develop](#develop)
 - [Test](#test)
 - [Build](#build)
 - [Deploy](#deploy)
+- [Run](#run)
 - [Contribute](#contribute)
 - [Notes](#notes)
 
@@ -19,6 +20,7 @@ A news bot.
 - [Composer](https://getcomposer.org/)
 - A local web-server e.g. [Apache](https://www.apache.org/dyn/closer.cgi)
 - A publicly accessible URL e.g. [ngrok](https://ngrok.com/)
+- A Wordpress instance with the [Wordpress REST API](https://wordpress.org/plugins/rest-api/)
 
 ### First time
 
@@ -64,6 +66,7 @@ You can deploy Sourcebot to your own web-server or quickly and for free to Herok
 - [Composer](https://getcomposer.org/)
 - A web-server e.g. [Apache](https://www.apache.org/dyn/closer.cgi)
   - SSL must be configured
+- A Wordpress instance with the [Wordpress REST API](https://wordpress.org/plugins/rest-api/)
 
 ### Before Deploy
 
@@ -83,6 +86,10 @@ Once you have Sourcebot running on a publicly accessible URL you need to set and
 - Click `Verify and Save`
 - Visit [Facebook Messenger](https://messenger.com)
 - Search for your Facebook Page and send it a message
+
+## <a name="run"></a> Run
+
+To check Sourcebot can connect to your Wordpress go to <code>/wordpress-api-status.php</code>
 
 ## <a name="contribute"></a> Contribute
 
