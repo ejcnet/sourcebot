@@ -26,3 +26,4 @@ ratings:
 exclude_paths:
 - tests/**/*
 - vendor/**/*
+- public/css/app.css # Contains minified bootstrap
