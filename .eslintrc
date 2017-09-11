@@ -108,6 +108,7 @@ rules:
   - 2
   - vars: all
     args: after-used
+    varsIgnorePattern: app
   no-use-before-define: 0
   no-useless-call: 0
   no-void: 0
