@@ -32,7 +32,7 @@
             "database"
         ],
         "psr-4": {
-            "Sourcebot\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

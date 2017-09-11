@@ -1,10 +1,10 @@
 <?php
 
-namespace Sourcebot\Http\Controllers;
+namespace App\Http\Controllers;
 
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
-use Sourcebot\Conversations\ExampleConversation;
+use App\Conversations\ExampleConversation;
 
 class BotManController extends Controller
 {
