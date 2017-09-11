@@ -1,0 +1,2 @@
+--exclude-list==.min.css
+--ignore=adjoining-classes,box-model,ids,order-alphabetical,unqualified-attributes,box-sizing,universal-selector,font-sizes,bulletproof-font-face
