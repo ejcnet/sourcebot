@@ -24,5 +24,5 @@ jobs:
       - run: chmod +x ./cc-test-reporter
       - run: sudo mkdir -p $CIRCLE_TEST_REPORTS/phpunit
       - run: ./cc-test-reporter before-build
-      - run: sudo APP_KEY=base64:WHw0yQBIsmvxpan/bxfQxrwBI4vqNwp5w2+vF2kqYQ8= vendor/bin/phpunit --coverage-clover clover.xml
+      - run: sudo APP_KEY=`php artisan key:generate --show` vendor/bin/phpunit --coverage-clover clover.xml
       - run: ./cc-test-reporter after-build -t clover --exit-code $?
