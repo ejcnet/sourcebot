@@ -4,6 +4,9 @@
   "repository": "https://github.com/ejcnet/sourcebot",
   "keywords": ["news", "bot", "facebook messenger"],
   "env": {
+    "APP_KEY": {
+      "description": "The Laravel app secret key. Generate one with: php artisan key:generate --show"
+    }
   },
   "success_url": "/",
   "buildpacks": [
