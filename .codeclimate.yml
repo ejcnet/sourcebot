@@ -12,6 +12,8 @@ engines:
     enabled: true
   phpmd:
     enabled: true
+    config:
+      rulesets: "phpmdruleset.xml"
   radon:
     enabled: true
 ratings:
