@@ -13,5 +13,4 @@ class WordpressApiController extends Controller
     {
         return view('wordpress-api-status');
     }
-
 }
