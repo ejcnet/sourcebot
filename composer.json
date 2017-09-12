@@ -1,13 +1,14 @@
 {
-    "name": "botman/studio",
-    "description": "BotMan Chatbot framework.",
-    "keywords": [
-        "botman",
-        "chatbot",
-        "framework",
-        "laravel"
-    ],
+    "name": "Ejcnet/Sourcebot",
+    "description": "A web and Facebook Messenger news bot for your Wordpress website.",
     "license": "MIT",
+    "keywords": ["news", "bot", "sourcebot", "botman", "chatbot", "laravel"],
+    "authors": [
+    {
+        "name": "Paul Watson",
+        "email": "sourcebot@paulmwatson.com"
+    }
+    ],
     "type": "project",
     "require": {
         "php": ">=7.0",

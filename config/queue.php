@@ -11,7 +11,7 @@ return [
     | API, giving you convenient access to each back-end using the same
     | syntax for each one. Here you may set the default queue driver.
     |
-    | Supported: "sync", "database", "beanstalkd", "sqs", "redis", "null"
+    | Supported: "sync", "database", "redis", "null"
     |
     */
 
@@ -39,22 +39,6 @@ return [
             'table' => 'jobs',
             'queue' => 'default',
             'retry_after' => 90,
-        ],
-
-        'beanstalkd' => [
-            'driver' => 'beanstalkd',
-            'host' => 'localhost',
-            'queue' => 'default',
-            'retry_after' => 90,
-        ],
-
-        'sqs' => [
-            'driver' => 'sqs',
-            'key' => 'your-public-key',
-            'secret' => 'your-secret-key',
-            'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
-            'queue' => 'your-queue-name',
-            'region' => 'us-east-1',
         ],
 
         'redis' => [
