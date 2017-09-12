@@ -6,6 +6,9 @@
   "env": {
     "APP_KEY": {
       "description": "The Laravel app secret key. Generate one with: php artisan key:generate --show"
+    },
+    "WORDPRESS_API_HOST_URL": {
+      "description": "The host for the Wordpress REST API e.g. https://yourwebsite.com/"
     }
   },
   "success_url": "/",
