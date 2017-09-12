@@ -89,7 +89,7 @@ Once you have Sourcebot running on a publicly accessible URL you need to set and
 
 ## <a name="run"></a> Run
 
-To check Sourcebot can connect to your Wordpress go to <code>/wordpress-api-status.php</code>
+To check Sourcebot can connect to your Wordpress go to <code>/wordpress-api-status</code>
 
 ## <a name="contribute"></a> Contribute
 
