@@ -1,7 +1,7 @@
 <?php
 use Michelf\Markdown;
 
-$html=Markdown::defaultTransform(file_get_contents('../README.md'));
+$html=Markdown::defaultTransform(file_get_contents(base_path('README.md')));
 ?>
 <!DOCTYPE html>
 <html>
