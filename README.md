@@ -1,6 +1,7 @@
 # Sourcebot
-A web and Facebook Messenger news bot for your Wordpress website.
+A news bot for your Wordpress website.
 
+- [Config](#config)
 - [Develop](#develop)
 - [Test](#test)
 - [Build](#build)
@@ -8,6 +9,12 @@ A web and Facebook Messenger news bot for your Wordpress website.
 - [Run](#run)
 - [Contribute](#contribute)
 - [Notes](#notes)
+
+## <a name="config"></a> Config
+
+Sourcebot uses Laravel which requires `APP_KEY` to get going. You can use `php artisan key:generate` or get one from [Browserling](https://www.browserling.com/tools/aes-encrypt). Be sure to prefix it with `base64:` e.g. `base64:K7Z/ibxUt1a6x8oPeT0d+arysQsx2MkStDaiGDlECJ8=`
+
+For news data Sourcebot defaults to http://source.co.zw but you can change this to your own [Wordpress REST API](https://wordpress.org/plugins/rest-api/) by setting `WORDPRESS_API_HOST`. This should be the host where your Wordpress is installed. Don't include `/wp-json/wp/v2/`
 
 ## <a name="develop"></a> Develop
 [![Code Climate](https://codeclimate.com/github/ejcnet/sourcebot/badges/gpa.svg)](https://codeclimate.com/github/ejcnet/sourcebot)

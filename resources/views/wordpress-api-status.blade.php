@@ -26,10 +26,10 @@
       <ol>
         <li>Starting check</li>
         <?php
-        if (getenv('WORDPRESS_API_HOST_URL')) {
+        if (config('wordpress.api_host')) {
             $client = new \GuzzleHttp\Client();
-            $request_host = getenv('WORDPRESS_API_HOST_URL');
-            echo '<li><code>WORDPRESS_API_HOST_URL</code> set to <code>'.$request_host.'</code></li>';
+            $request_host = config('wordpress.api_host');
+            echo '<li><code>WORDPRESS_API_HOST</code> set to <code>'.$request_host.'</code></li>';
             $request_url = $request_host.'/wp-json/wp/v2/';
             echo '<li>Attempting to <code>GET</code> <code>'.$request_url.'</code></li>';
             try {
@@ -50,12 +50,12 @@
             } catch (GuzzleHttp\Exception\ConnectException $e) { #good
                 $res = $e->getResponse();
                 $msg = 'Connection exception';
-                $suggestion = '<code>WORDPRESS_API_HOST_URL</code> is probably invalid. It should be something like
+                $suggestion = '<code>WORDPRESS_API_HOST</code> is probably invalid. It should be something like
                                 <code>https://yourwebsite.com/</code>';
             } catch (Exception $e) {
                 $res = $e->getResponse();
                 $msg_full = $e->getMessage();
-                $suggestion = 'Please check your server and that <code>WORDPRESS_API_HOST_URL</code> is set to something
+                $suggestion = 'Please check your server and that <code>WORDPRESS_API_HOST</code> is set to something
                                  like <code>https://yourwebsite.com/</code>';
             } finally {
                 if (isset($res)) {
@@ -72,7 +72,7 @@
                 }
             }
         } else { #good
-            $error = 'Please set <code>WORDPRESS_API_HOST_URL</code> to something like
+            $error = 'Please set <code>WORDPRESS_API_HOST</code> to something like
                         <code>https://yourwebsite.com</code>';
             Log::info($error);
             echo '<li>'.$error.'</li>';
